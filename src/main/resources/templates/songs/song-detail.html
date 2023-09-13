@@ -5,18 +5,17 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Songs</title>
+  <title>Song Detail</title>
 </head>
 <body>
-<h1>Songs</h1>
-<!-- elenco delle songs -->
-<ul>
-  <li th:each="song : ${songs}">
-    <a th:href="@{/songs/{id}(id=${song.id})}" th:text="${song.title}"></a>
-  </li>
-</ul>
+<h1>Song Detail</h1>
+<!-- ho un attributo song che contiene l'oggetto Song -->
+<div th:text="|Id: ${song.id}|"></div>
+<div th:text="|Title: ${song.title}|"></div>
+<div th:text="|Authors: ${song.author}|"></div>
+<!-- link che torna alla lista -->
 <div>
-  <a th:href="@{/}">Back to Home</a>
+  <a th:href="@{/songs}">Back to list</a>
 </div>
 </body>
 </html>

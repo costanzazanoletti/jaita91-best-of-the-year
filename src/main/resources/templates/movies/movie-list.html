@@ -19,7 +19,12 @@
     }
   -->
   <ul>
-    <li th:each="movie : ${movies}" th:text="${movie.getTitle()}"></li>
+    <li th:each="movie : ${movies}">
+      <a th:href="@{/movies/{movieId}(movieId=${movie.id})}">
+        <span th:text="${movie.title}"></span>
+      </a>
+      <!--a th:href="@{/movies/{movieId}(movieId=${movie.id})}">detail</a-->
+    </li>
   </ul>
   <a th:href="@{/}">Back to Home</a>
 </div>

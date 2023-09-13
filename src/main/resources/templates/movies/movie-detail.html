@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Movie Detail</title>
+</head>
+<body>
+<h1>Movie Detail</h1>
+<!-- dentro a questo template avrò un attributo che si chiama movie che è un oggetto di tipo Movie -->
+<div th:text="|Id: ${movie.id}|"></div>
+<div th:text="|Title: ${movie.title}|"></div>
+<div th:text="|Director: ${movie.director}|"></div>
+<div>
+  <a th:href="@{/movies}">Back to list</a>
+</div>
+</body>
+</html>
