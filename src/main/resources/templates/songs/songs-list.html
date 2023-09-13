@@ -9,6 +9,10 @@
 </head>
 <body>
 <h1>Songs</h1>
+<!-- elenco delle songs -->
+<ul>
+  <li th:each="song : ${songs}" th:text="${song.title}"></li>
+</ul>
 <div>
   <a th:href="@{/}">Back to Home</a>
 </div>

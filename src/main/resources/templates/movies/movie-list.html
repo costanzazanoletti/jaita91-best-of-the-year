@@ -10,6 +10,17 @@
 <body>
 <h1>Movies</h1>
 <div>
+  <!-- ho nel model un attributo che si chiama movies e che contiene la lista di Movie -->
+  <!--
+  il th:each + th:text funzionano come il for each Java
+  for(Movie m : fakeMovieList){
+      // faccio qualcosa
+      System.out.println(m.getTitle());
+    }
+  -->
+  <ul>
+    <li th:each="movie : ${movies}" th:text="${movie.getTitle()}"></li>
+  </ul>
   <a th:href="@{/}">Back to Home</a>
 </div>
 </body>
